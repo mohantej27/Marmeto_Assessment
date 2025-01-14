@@ -1,0 +1,305 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+/* Header styles */
+header {
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex; /* Flexbox layout for horizontal alignment */
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between; /* Space between logo, nav, and icons */
+}
+
+header .container {
+    display: flex; /* Ensure the inner container uses flexbox */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute logo, nav, and icons evenly */
+    width: 100%; /* Make it stretch across the header */
+}
+
+header .logo {
+    display: flex; /* Logo as a flex container */
+    align-items: center; /* Center image and text vertically */
+    gap: 10px; /* Add space between the image and text */
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header nav ul {
+    display: flex; /* Navigation links in a row */
+    list-style: none; /* Remove bullets */
+    gap: 30px; /* Space between links */
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+header .icons {
+    display: flex; /* Flexbox for icons */
+    align-items: center; /* Align icons vertically */
+    gap: 15px; /* Space between icons */
+}
+
+header .icons img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: rgb(70, 60, 60);
+    color: white;
+    font-size: 0.6em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 6px;
+}
+
+
+/* Cart header styles */
+.cart-header {
+    background-image: url(Assets/Rectangle\ 1.png);
+    height: 350px; /* Increased height */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+}
+
+.cart-header h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.cart-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Cart section styles */
+.cart {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cart-items {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.cart-totals {
+    flex: 1;
+    background: #fff7e6;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: bold;
+    color: #e4c880;
+}
+
+#checkout-btn {
+    background-color: #e4c880;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+#checkout-btn:hover {
+    background-color: #d1b06c;
+}
+/* Shared layout for rows (heading and cart items) */
+.cart-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr 1fr 1fr 50px; /* Consistent column widths */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between columns */
+    padding: 10px 0; /* Add vertical padding */
+    border-bottom: 1px solid #ddd; /* Divider between rows */
+}
+
+/* Specific styles for the heading row */
+.heading-row {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Placeholder styles for empty cells */
+.cart-image-placeholder {
+    width: 120px;
+}
+
+/* Image styling */
+.cart-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Input styling */
+.curved-input {
+    width: 4em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Remove button styling */
+.remove-item {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+
+
+/* Footer styles */
+footer {
+    background: #f9f9f9;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px;
+    text-align: center;
+}
+
+footer .footer-icons div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer .footer-icons div p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Loader */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f0c14b;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 10px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to stack on smaller screens */
+        padding: 20px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    header nav ul {
+        gap: 15px; /* Reduces spacing for smaller screens */
+    }
+
+    header .icons {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .cart {
+        flex-direction: column; /* Stacks cart items and totals */
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    /* .cart-items, */
+    .cart-totals {
+        padding: 10px;
+    }
+
+    footer .footer-icons div {
+        font-size: 0.8rem;
+    }
+}

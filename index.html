@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="Assets/Meubel House_Logos-05.png" alt="Logo">
+                <b style="font-size: 32px;">Marmeto</b>
+            </div>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Icons -->
+            <div class="icons">
+                <img src="Assets/search.png" alt="Search">
+                <img src="Assets/heart.png" alt="Favorites">
+                <div class="cart-icon">
+                    <img src="Assets/cartimg.png" alt="Cart">
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <main>
+        <div class="cart-header">
+            <img src="Assets/Meubel House_Logos-05.png" alt="Logo" style="width: 35px;">
+            <h1><b>Cart</b></h1>
+            <p>Home > Cart</p>
+        </div>
+    
+        <div class="container">
+            <div class="cart">
+                <div class="cart-items" id="cart-items">
+                   
+                </div>
+    
+                <div class="cart-totals">
+                    <h3>Cart Totals</h3>
+                    <div class="totals-row">
+                        <p>Subtotal</p>
+                        <p>Rs. <span id="subtotal">0.00</span></p>
+                    </div>
+                    <div class="totals-row discount">
+                        <p>Discount</p>
+                        <p>Rs. <span id="discount">0.00</span></p>
+                    </div>
+                    <div class="totals-row total">
+                        <p>Total</p>
+                        <p>Rs. <span id="total">0.00</span></p>
+                    </div>
+                    <button id="checkout-btn">Check Out</button>
+                    <div id="loader" class="loader" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-icons">
+                <div>
+                    🏆 <p>High Quality<br>crafted from top materials</p>
+                </div>
+                <div>
+                    ✔️ <p>Warranty Protection<br>Over 2 years</p>
+                </div>
+                <div>
+                    🚚 <p>Free Shipping<br>Order over 150 $</p>
+                </div>
+                <div>
+                    📞 <p>24 / 7 Support<br>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
